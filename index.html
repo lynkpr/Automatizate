@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Daily - Tu dosis diaria de Inteligencia Artificial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(0, 150, 255, 0.7);
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .tech-border {
+            border: 1px solid rgba(0, 150, 255, 0.3);
+        }
+        .tech-icon {
+            color: #00a8ff;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-900 text-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Hero Section -->
+        <div class="gradient-bg text-white py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+                    La IA está <span class="text-blue-400">revolucionando</span> TODO
+                </h1>
+                <p class="text-xl sm:text-2xl mb-8 text-blue-100">
+                    ¿Quieres estar al día sin volverte loco? <br>
+                    Recibe cada mañana lo más relevante de la IA en tu email.
+                </p>
+                
+                <div class="max-w-md mx-auto bg-gray-800 rounded-lg shadow-xl overflow-hidden pulse tech-border">
+                    <div class="p-5">
+                        <h3 class="text-blue-300 font-semibold text-lg mb-3">
+                            Únete a +15,000 early adopters
+                        </h3>
+                        <form id="emailForm" class="flex flex-col sm:flex-row gap-2">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                placeholder="Tu mejor email" 
+                                class="flex-grow px-4 py-3 rounded-lg border border-gray-700 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                            >
+                            <button 
+                                type="submit" 
+                                class="btn-glow bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg transition duration-300"
+                            >
+                                ¡Quiero mi dosis diaria! <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </form>
+                        <p class="text-xs text-gray-400 mt-2">
+                            Sin spam. Solo contenido valioso. Puedes darte de baja cuando quieras.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-blue-300 mb-12">
+                    Lo que recibirás cada mañana:
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 tech-border">
+                        <div class="tech-icon text-3xl mb-4">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-white">Actualizaciones express</h3>
+                        <p class="text-gray-300">
+                            Solo lo más relevante de la IA, filtrado y explicado en 2 minutos de lectura.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 tech-border">
+                        <div class="tech-icon text-3xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-white">Casos reales</h3>
+                        <p class="text-gray-300">
+                            Ejemplos prácticos de cómo empresas y personas están usando la IA para ganar dinero y tiempo.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 tech-border">
+                        <div class="tech-icon text-3xl mb-4">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-white">Herramientas secretas</h3>
+                        <p class="text-gray-300">
+                            Acceso a herramientas de IA que pocos conocen y que te darán ventaja competitiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="gradient-bg text-white py-12 px-4 sm:px-6 lg:px-8 mt-auto">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-6">
+                    La IA no espera... <span class="text-blue-400">¿y tú?</span>
+                </h2>
+                <p class="text-lg mb-6 text-blue-100">
+                    Cada día que pasa sin entenderla es una oportunidad perdida.
+                </p>
+                <a href="#emailForm" class="btn-glow inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg text-lg transition duration-300">
+                    ¡No quiero quedarme atrás! <i class="fas fa-rocket ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 py-6 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    © 2023 IA Daily - Todos los derechos reservados
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            // Aquí iría la lógica para enviar el email a tu base de datos o servicio de email marketing
+            console.log('Email capturado:', email);
+            
+            // Mensaje de éxito
+            alert(`¡Gracias! Pronto recibirás tu primera dosis de IA en ${email}`);
+            document.getElementById('email').value = '';
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Lynkpr/automatizate" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
