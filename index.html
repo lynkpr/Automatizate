@@ -6,7 +6,7 @@
     <title>IA Daily - Tu dosis diaria de Inteligencia Artificial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <style>
         .gradient-bg {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
@@ -27,19 +27,106 @@
         .tech-icon {
             color: #00a8ff;
         }
+        /* ESTILOS ADICIONALES PARA MAILCHIMP */
+        /* Sobrescribe los estilos por defecto de Mailchimp y aplica los tuyos */
+        #mc_embed_signup {
+            background: transparent !important; /* Haz el fondo transparente */
+            font-family: inherit !important; /* Hereda la fuente de tu body */
+            width: 100% !important; /* Ajusta el ancho al 100% de su contenedor */
+            clear: none !important; /* Elimina la flotación por defecto */
+        }
+
+        /* Oculta la referencia "Powered by Mailchimp" si no la quieres */
+        #mc_embed_signup .optionalParent p {
+            display: none !important;
+        }
+
+        /* Aplica los estilos del input de Tailwind al campo de email de Mailchimp */
+        #mc_embed_signup .mc-field-group input[type="email"] {
+            /* Copiado de tus estilos de input existentes */
+            flex-grow: 1; /* Si quieres que crezca dentro de un flex container */
+            padding: 12px 16px !important; /* Ajusta el padding */
+            border-radius: 0.5rem !important; /* rounded-lg en Tailwind */
+            border: 1px solid #4a5568 !important; /* border-gray-700 en Tailwind */
+            background-color: #4a5568 !important; /* bg-gray-700 en Tailwind */
+            color: white !important;
+            outline: none !important;
+            box-shadow: none !important; /* Elimina sombras por defecto */
+            font-size: 1rem !important; /* Tamaño de fuente estándar */
+        }
+
+        #mc_embed_signup .mc-field-group input[type="email"]:focus {
+            outline: none !important;
+            ring-color: #3b82f6 !important; /* focus:ring-blue-500 en Tailwind */
+            ring-width: 2px !important;
+            border-color: #3b82f6 !important; /* focus:ring-blue-500 en Tailwind */
+        }
+
+        /* Estilo para la etiqueta "Email Address *" */
+        #mc_embed_signup label {
+            display: none !important; /* Oculta la etiqueta si solo quieres el placeholder */
+            /* O si la quieres visible, personaliza su estilo aquí */
+            /* font-size: 1rem; color: #cbd5e0; margin-bottom: 8px; */
+        }
+
+        /* Estilo para el texto "indicates required" */
+        #mc_embed_signup .indicates-required {
+            display: none !important; /* Oculta si no quieres que aparezca */
+            /* font-size: 0.75rem; color: #a0aec0; margin-bottom: 1rem; text-align: left; */
+        }
+
+        /* Estilo del botón de suscripción para que se parezca al tuyo */
+        #mc-embedded-subscribe {
+            /* Copiado de tus estilos de botón existentes */
+            background-color: #2563eb !important; /* bg-blue-600 en Tailwind */
+            color: white !important;
+            font-weight: 700 !important; /* font-bold en Tailwind */
+            padding: 0.75rem 1.5rem !important; /* px-6 py-3 en Tailwind */
+            border-radius: 0.5rem !important; /* rounded-lg en Tailwind */
+            transition: background-color 0.3s ease !important;
+            box-shadow: none !important; /* Elimina cualquier sombra por defecto de Mailchimp */
+            border: none !important; /* Asegura que no tenga borde */
+            cursor: pointer !important;
+            width: 100%; /* Para que ocupe todo el ancho en móviles */
+        }
+
+        #mc-embedded-subscribe:hover {
+            background-color: #1d4ed8 !important; /* hover:bg-blue-700 en Tailwind */
+        }
+        
+        /* Ajuste para los mensajes de error/éxito de Mailchimp */
+        #mce-responses {
+            margin-top: 10px;
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 600; /* semibold */
+            text-align: left; /* Alinea a la izquierda */
+        }
+        #mce-error-response {
+            color: #ef4444; /* text-red-500 */
+        }
+        #mce-success-response {
+            color: #22c55e; /* text-green-500 */
+        }
+
+        /* Ajustes de espaciado general si es necesario */
+        #mc_embed_signup_scroll {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; /* Puedes ajustar este espacio entre los elementos */
+            padding: 0; /* Elimina el padding por defecto si no lo necesitas */
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-900 text-gray-100">
     <div class="min-h-screen flex flex-col">
-        <!-- Hero Section -->
         <div class="gradient-bg text-white py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-                    LA IA YA NO ES FUTURO.<span class="text-blue-400">ES PLATA.</span>
+                    La IA está <span class="text-blue-400">revolucionando</span> TODO
                 </h1>
                 <p class="text-xl sm:text-2xl mb-8 text-blue-100">
-                    ¿Cansado de ver cómo la IA cambia todo y tú sigues en las mismas? <br>
-                    Te mando el chismorreo más caliente y útil, directo a tu correo, para que no te quedes atrás.
+                    ¿Quieres estar al día sin volverte loco? <br>
+                    Recibe cada mañana lo más relevante de la IA en tu email.
                 </p>
                 
                 <div class="max-w-md mx-auto bg-gray-800 rounded-lg shadow-xl overflow-hidden pulse tech-border">
@@ -47,22 +134,27 @@
                         <h3 class="text-blue-300 font-semibold text-lg mb-3">
                             Únete a +15,000 early adopters
                         </h3>
-                        <iframe src="https://andoniovalles.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-                        <form id="emailForm" class="flex flex-col sm:flex-row gap-2">
-                            <input 
-                                type="email" 
-                                id="email" 
-                                placeholder="Tu mejor email" 
-                                class="flex-grow px-4 py-3 rounded-lg border border-gray-700 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                required
-                            >
-                            <button 
-                                type="submit" 
-                                class="btn-glow bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg transition duration-300"
-                            >
-                                ¡Quiero mi dosis diaria! <i class="fas fa-arrow-right ml-2"></i>
-                            </button>
-                        </form>
+                        
+                        <div id="mc_embed_shell">
+                            <div id="mc_embed_signup">
+                                <form action="https://gmail.us11.list-manage.com/subscribe/post?u=cc06a758a5baca2b50e26e6fc&amp;id=45c01a89df&amp;f_id=009b15e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                    <div id="mc_embed_signup_scroll" class="flex flex-col sm:flex-row gap-2"> <div class="mc-field-group flex-grow"> <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="Tu mejor email"> </div>
+                                        <div id="mce-responses" class="clear foot">
+                                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                                        </div>
+                                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                            <input type="text" name="b_cc06a758a5baca2b50e26e6fc_45c01a89df" tabindex="-1" value="">
+                                        </div>
+                                        <div class="optionalParent">
+                                            <div class="clear foot">
+                                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="¡Quiero mi dosis diaria!"> </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                        </div>
                         <p class="text-xs text-gray-400 mt-2">
                             Sin spam. Solo contenido valioso. Puedes darte de baja cuando quieras.
                         </p>
@@ -71,7 +163,6 @@
             </div>
         </div>
 
-        <!-- Benefits Section -->
         <div class="py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold text-center text-blue-300 mb-12">
@@ -112,7 +203,6 @@
             </div>
         </div>
 
-        <!-- CTA Section -->
         <div class="gradient-bg text-white py-12 px-4 sm:px-6 lg:px-8 mt-auto">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl sm:text-3xl font-bold mb-6">
@@ -121,13 +211,12 @@
                 <p class="text-lg mb-6 text-blue-100">
                     Cada día que pasa sin entenderla es una oportunidad perdida.
                 </p>
-                <a href="#emailForm" class="btn-glow inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg text-lg transition duration-300">
+                <a href="#mc_embed_shell" class="btn-glow inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg text-lg transition duration-300">
                     ¡No quiero quedarme atrás! <i class="fas fa-rocket ml-2"></i>
                 </a>
             </div>
         </div>
 
-        <!-- Footer -->
         <footer class="bg-gray-800 py-6 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 mb-4 md:mb-0">
@@ -148,18 +237,6 @@
         </footer>
     </div>
 
-    <script>
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            
-            // Aquí iría la lógica para enviar el email a tu base de datos o servicio de email marketing
-            console.log('Email capturado:', email);
-            
-            // Mensaje de éxito
-            alert(`¡Gracias! Pronto recibirás tu primera dosis de IA en ${email}`);
-            document.getElementById('email').value = '';
-        });
-    </script>
-<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Lynkpr/automatizate" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+    <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Lynkpr/automatizate" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p>
+</body>
 </html>
